@@ -1,38 +1,24 @@
-package P2;
+import org.junit.jupiter.api.Test;
+import java.util.*;
 
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-public class L2022212024_17_Test {
-
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
+class L2022212024_17_Test {
 
     @Test
-    public void findRepeatedDnaSequences() {
-//        ç¤ºä¾‹1
+    void findRepeatedDnaSequences() {
+        //        Ê¾Àı1
         /*
-        * @param String s:é•¿åº¦ä»»æ„ï¼Œç”±ATCGå››ä¸ªå­—æ¯ç»„æˆ
-        * @result List<String> é•¿åº¦ä¸å°äº10çš„é‡å¤åºåˆ—
-        *           s<=10æ—¶ï¼Œè¾“å‡ºä¸ºç©º
-        * ç¤ºä¾‹1
-        * è¾“å…¥ï¼šsï¼Œæœ‰ä¸¤æ¡é•¿é‡å¤é“¾çš„DNA
-        *
-        * */
+         * @param String s:³¤¶ÈÈÎÒâ£¬ÓÉATCGËÄ¸ö×ÖÄ¸×é³É
+         * @result List<String> ³¤¶È²»Ğ¡ÓÚ10µÄÖØ¸´ĞòÁĞ
+         *           s<=10Ê±£¬Êä³öÎª¿Õ
+         * Ê¾Àı1
+         * ÊäÈë£ºs£¬ÓĞÁ½Ìõ³¤ÖØ¸´Á´µÄDNA
+         *
+         * */
         /*
-        *  s.lenth()>10,æœ‰ä¸¤æ¡é‡å¤é“¾
-        * */
+         *  s.lenth()>10,ÓĞÁ½ÌõÖØ¸´Á´
+         * */
 
         String s="AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT";
         List<String> answer=new ArrayList<>();
@@ -44,17 +30,17 @@ public class L2022212024_17_Test {
         assertEquals(answer,list);
 
         /*
-        * s>10,åªæœ‰ä¸€æ¡é‡å¤é“¾
-        * */
+         * s>10,Ö»ÓĞÒ»ÌõÖØ¸´Á´
+         * */
         solution = new Solution();
         s = "AAAAAAAAAAAAA";
         List<String> expected = Arrays.asList("AAAAAAAAAA");
         List<String> result = solution.findRepeatedDnaSequences(s);
         System.out.println(s+"exg2");
         assertEquals(expected, result);
-//        ç¤ºä¾‹3
-/*      s<10
-* */
+//        Ê¾Àı3
+        /*      s<10
+         * */
         s = "AAAAAAAAA";
         answer.clear();
         List<String> empty=new ArrayList<String>();
