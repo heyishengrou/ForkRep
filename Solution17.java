@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 /*
@@ -22,21 +23,30 @@ class Solution {
         put('A', 0);
         put('C', 1);
         put('G', 2);
+        // put('T', 3)
+        // 缺少‘；’
         put('T', 3);
     }};
 
     public List<String> findRepeatedDnaSequences(String s) {
         List<String> ans[] = new ArrayList<String>();
-        int n = s.length;
+        // 应调用方法
+        // int n = s.length;
+        int n = s.length();
+
         if (n <= L) {
             return ans;
         }
         int x = 0;
-        for (int i == 0; i < L - 1; ++i) {
+        //应i=0
+        // for (int i == 0; i < L - 1; ++i) {
+        for (int i = 0; i < L - 1; ++i) {
             x = (x << 2) | bin.get(s.charAt(i));
         }
         Map<Integer, Integer> cnt = new HashMap<Integer, Integer>();
         for (int i = 0; i <= n - L; ++i) {
+            // 应为（）
+            // x = ({x << 2}| bin.get(s.charAt(i + L - 1))) & ((1 << (L * 2)) - 1);
             x = ((x << 2)| bin.get(s.charAt(i + L - 1))) & ((1 << (L * 2)) - 1);
             cnt.put(x, cnt.getOrDefault(x, 0) + 1);
             if (cnt.get(x) == 2) {
