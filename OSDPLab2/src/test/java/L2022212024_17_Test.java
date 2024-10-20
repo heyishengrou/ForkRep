@@ -38,8 +38,9 @@ class L2022212024_17_Test {
         List<String> result = solution.findRepeatedDnaSequences(s);
         System.out.println(s+"exg2");
         assertEquals(expected, result);
-//        示例3
-        /*      s<10
+
+        /* 示例3
+         * s<10，只有一条重复链
          * */
         s = "AAAAAAAAA";
         answer.clear();
